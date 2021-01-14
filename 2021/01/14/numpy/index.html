@@ -71,12 +71,12 @@
 
   <!-- Pygments Highlight CSS -->
   
-<link rel="stylesheet" href="../../css/highlight.css">
-<link rel="stylesheet" href="../../css/widget.css">
-<link rel="stylesheet" href="../../css/rocket.css">
-<link rel="stylesheet" href="../../css/signature.css">
-<link rel="stylesheet" href="../../css/catalog.css">
-<link rel="stylesheet" href="../../css/livemylife.css">
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/widget.css">
+<link rel="stylesheet" href="../../../../css/rocket.css">
+<link rel="stylesheet" href="../../../../css/signature.css">
+<link rel="stylesheet" href="../../../../css/catalog.css">
+<link rel="stylesheet" href="../../../../css/livemylife.css">
 
 
   
@@ -138,10 +138,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/tags/hhh/">
+  <link rel="canonical" href="http://yoursite-url/2021/01/14/numpy/">
   <title>
     
-    either thin | or die
+    blog1 - either thin | or die
     
   </title>
 <meta name="generator" content="Hexo 4.2.1"></head>
@@ -289,8 +289,8 @@
 
   <style type="text/css">
     header.intro-header {
-       /*page*/
-        background-image: url('/img/header_img/archive_bg2.jpg');
+       /*post*/
+        background-image: url('/img/header_img/lml_bg.jpg');
       
     }
 
@@ -312,10 +312,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>Harriet&#39;s Blog</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">studying blog</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#machine learning" title="machine learning">machine learning</a>
+              
+              <a class="tag" href="/tags/#python" title="python">python</a>
+              
+            </div>
+            <h1>blog1</h1>
+            <h2 class="subheading">my first blog</h2>
+            <span class="meta">
+              Posted by WeiLi on
+              2021-01-14
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">7</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">1.4k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- 不蒜子统计 start -->
+            <span class="meta">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            <!-- WordCount end -->
+            
+
+
           </div>
           
         </div>
@@ -356,291 +388,379 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-	<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+	<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+        <p>numpy库学习#最大值最小值#点乘，对应元素相乘#求范数</p>
+<p>数组基础操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x=np.array([[<span class="number">1.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>,],[<span class="number">0.0</span>,<span class="number">1.0</span>,<span class="number">2.0</span>]])</span><br><span class="line">print(x)</span><br><span class="line">print(x.ndim)<span class="comment">#数组行维度</span></span><br><span class="line">print(x.shape)<span class="comment">#数组维数</span></span><br><span class="line">print(x.size)<span class="comment">#数组元素总数</span></span><br><span class="line">print(x.dtype)<span class="comment">#数组元素类型</span></span><br><span class="line">print(x.itemsize)<span class="comment">#每个元素字节大小</span></span><br><span class="line">print(x.data)<span class="comment">#数组元素的缓冲区</span></span><br></pre></td></tr></table></figure>
 
-      
-<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
+<pre><code>[[1. 0. 0.]
+ [0. 1. 2.]]
+2
+(2, 3)
+6
+float64
+8
+&lt;memory at 0x0000024F31080380&gt;</code></pre><p>arange(开始值，结束值，步长)<br>可以调用reshape（）方法制定形状<br>linspace（开始值，结束值，元素数量）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(np.arange(<span class="number">15</span>).reshape(<span class="number">5</span>,<span class="number">3</span>))</span><br><span class="line">print(np.arange(<span class="number">10</span>,<span class="number">30</span>,<span class="number">5</span>))</span><br><span class="line">print(np.arange(<span class="number">0</span>,<span class="number">2</span>,<span class="number">0.3</span>))</span><br><span class="line">print(np.linspace(<span class="number">0</span>,<span class="number">2</span>,<span class="number">9</span>))</span><br></pre></td></tr></table></figure>
 
-      
+<pre><code>[[ 0  1  2]
+ [ 3  4  5]
+ [ 6  7  8]
+ [ 9 10 11]
+ [12 13 14]]
+[10 15 20 25]
+[0.  0.3 0.6 0.9 1.2 1.5 1.8]
+[0.   0.25 0.5  0.75 1.   1.25 1.5  1.75 2.  ]</code></pre><p>#高斯分布又名正态分布<br>np.random.randn(shape):生成对应shape的高斯分布<br>np.random.normal(loc,scale,size):生成均值为loc，标准差为scale，形状shape为size的高斯分布<br>#均匀分布<br>np.random.rand(shape):生成对应shape的均匀分布<br>np.random.uniform(low,high,size):生成从[low，high]随机采样，样本数量为size的均匀分布</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(np.random.normal(loc=<span class="number">0.0</span>,scale=<span class="number">1</span>,size=(<span class="number">3</span>,<span class="number">3</span>)))</span><br><span class="line">print(np.random.uniform(<span class="number">1</span>,<span class="number">2</span>,<span class="number">10</span>))</span><br></pre></td></tr></table></figure>
 
-      <!-- 归档列表 -->
+<pre><code>[[-0.72070953 -2.06270597  0.42320503]
+ [-0.05479257 -0.26450722  0.79458414]
+ [ 1.1214181  -0.69882028  0.65837358]]
+[1.21690709 1.38786632 1.35134512 1.52598162 1.42001798 1.10385186
+ 1.91082609 1.20267429 1.18758319 1.73227281]</code></pre><p>特殊数组<br>zero：全零数组<br>ones：全1数组<br>empty：空数组<br>dtype：定义元素类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(np.zeros((<span class="number">4</span>,<span class="number">3</span>)))</span><br><span class="line">print(np.ones((<span class="number">3</span>,<span class="number">3</span>)))</span><br><span class="line">print(np.empty((<span class="number">2</span>,<span class="number">4</span>)))</span><br></pre></td></tr></table></figure>
 
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
-          <span class="tag-text">2021</span>
-        </span>
-        <ul>
+<pre><code>[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+[[1. 1. 1.]
+ [1. 1. 1.]
+ [1. 1. 1.]]
+[[0.25 0.5  0.75 1.  ]
+ [1.25 1.5  1.75 2.  ]]</code></pre><p>数组索引：访问数组的行元素，列元素，每个元素<br>print(c[第几个数组，行，列])</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c=np.arange(<span class="number">24</span>).reshape(<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>)</span><br><span class="line">print(c)</span><br><span class="line">print(c[<span class="number">1</span>,<span class="number">0</span>,:])</span><br></pre></td></tr></table></figure>
+
+<pre><code>[[[ 0  1  2  3]
+  [ 4  5  6  7]]
+
+ [[ 8  9 10 11]
+  [12 13 14 15]]
+
+ [[16 17 18 19]
+  [20 21 22 23]]]
+[ 8  9 10 11]</code></pre><p>数组运算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>,<span class="number">50</span>])<span class="comment">#数组除法</span></span><br><span class="line">aa=np.arange(<span class="number">1</span>,<span class="number">5</span>)</span><br><span class="line">print(a/aa)</span><br><span class="line">b=np.arange(<span class="number">4</span>)<span class="comment">#数组减法</span></span><br><span class="line">c=a-b</span><br><span class="line">print(c)</span><br><span class="line">print(b**<span class="number">2</span>)<span class="comment">#数组乘方</span></span><br><span class="line">A=np.array([[<span class="number">0</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">4</span>]])<span class="comment">#两数组求积</span></span><br><span class="line">d=np.array([[<span class="number">2</span>,<span class="number">1</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">print(A*d)</span><br><span class="line">print(d.min())</span><br><span class="line">print(d.max())</span><br></pre></td></tr></table></figure>
+
+<pre><code>[20.         15.         13.33333333 12.5       ]
+[20 29 38 47]
+[0 1 4 9]
+[[ 0  1]
+ [ 3 16]]
+1
+4</code></pre><p>划分数组<br>np.split(arr,n):n为整数或列表，n为整数时必须能均匀划分<br>np.array_split(arr,n)：类似上面用法，但可以不均等划分</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x=np.arange(<span class="number">9</span>)</span><br><span class="line">print(np.split(x,<span class="number">3</span>))</span><br><span class="line">y=np.arange(<span class="number">8</span>)</span><br><span class="line">print(np.array_split(y,[<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>]))</span><br><span class="line">print(np.array_split(y,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[array([0, 1, 2]), array([3, 4, 5]), array([6, 7, 8])]
+[array([0, 1]), array([2, 3]), array([4, 5, 6]), array([7])]
+[array([0, 1, 2]), array([3, 4, 5]), array([6, 7])]</code></pre><p>降维<br>ravel（）：返回一维数组，改变一维数组内容后，原数组内容改变<br>flatten（）：返回一维数组，改变一维数组内容后，原数组内容不变</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]])</span><br><span class="line">b=np.array([[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]])</span><br><span class="line">print(a.ravel())</span><br><span class="line">print(b.flatten())</span><br><span class="line">c=a.ravel()</span><br><span class="line">d=b.flatten()</span><br><span class="line">c[<span class="number">0</span>]=<span class="number">10</span></span><br><span class="line">d[<span class="number">0</span>]=<span class="number">10</span></span><br><span class="line">print(c)</span><br><span class="line">print(a)</span><br><span class="line">print(d)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[1 2 3 7 8 9]
+[4 5 6 1 2 3]
+[10  2  3  7  8  9]
+[[10  2  3]
+ [ 7  8  9]]
+[10  5  6  1  2  3]
+[[4 5 6]
+ [1 2 3]]</code></pre><p>创建矩阵matrix（）<br>而矩阵的基本运算包括矩阵的加法，减法，数乘，转置，共轭和共轭转置 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a=np.matrix(<span class="string">'1,2;3,4'</span>)</span><br><span class="line">b=np.matrix([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line">print(a.T)<span class="comment">#矩阵转置</span></span><br><span class="line">c=a.T</span><br><span class="line">print(a*c)<span class="comment">#矩阵乘法</span></span><br><span class="line">print(a.I)<span class="comment">#矩阵求逆</span></span><br></pre></td></tr></table></figure>
+
+<pre><code>[[1 2]
+ [3 4]]
+[[1 2]
+ [3 4]]
+[[1 3]
+ [2 4]]
+[[ 5 11]
+ [11 25]]
+[[-2.   1. ]
+ [ 1.5 -0.5]]</code></pre><p>矩阵运算<br>#numpy.dot（）返回两个数组点积。一维数组向量内积，二维向量等效于矩阵乘法，n维数组，是a的最后一个轴和b的倒数第二个轴的乘积<br>numpy.vdot（）两个向量点积<br>numpy.inner（）返回一组向量向量内积<br>#numpy.matmul（）两个数组的矩阵乘积;对于一维和多维有特殊算法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">b=np.array([[<span class="number">11</span>,<span class="number">12</span>],[<span class="number">13</span>,<span class="number">14</span>]])</span><br><span class="line">print(np.dot(a,b))<span class="comment">#[[1*11+2*13,1*12+2*14],[3*11+4*13,3*12+4*14]]</span></span><br><span class="line">print(<span class="string">'\n'</span>)</span><br><span class="line">print(np.vdot(a,b))<span class="comment">#1*11+2*12+3*13+4*14</span></span><br><span class="line">print(<span class="string">'\n'</span>)</span><br><span class="line">x=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">y=np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">print(np.inner(x,y))<span class="comment">#1*1+2*2+3*3</span></span><br><span class="line">print(<span class="string">'\n'</span>)</span><br><span class="line">c=np.array([[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">1</span>,<span class="number">1</span>]])</span><br><span class="line">d=np.array([[<span class="number">4</span>,<span class="number">1</span>],[<span class="number">2</span>,<span class="number">2</span>]])</span><br><span class="line">print(np.matmul(c,d))</span><br></pre></td></tr></table></figure>
+
+<pre><code>[[37 40]
+ [85 92]]</code></pre><p>​<br>    130</p>
+<p>​<br>    14</p>
+<p>​<br>    [[4 1]<br>     [6 3]]</p>
+<p>numpy.linalg.det()计算输入矩阵的行列式<br>numpy.linalg.solve()矩阵形式线性方程的解<br>numpy.linalg.inv（）求矩阵的逆</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">print(np.linalg.det(a))</span><br><span class="line">b=np.array([[<span class="number">6</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">4</span>,<span class="number">-2</span>,<span class="number">5</span>],[<span class="number">2</span>,<span class="number">8</span>,<span class="number">7</span>]])</span><br><span class="line">print(b)</span><br><span class="line">print(np.linalg.det(b))</span><br><span class="line">print(<span class="number">6</span>*(<span class="number">-2</span>*<span class="number">7</span><span class="number">-5</span>*<span class="number">8</span>)<span class="number">-1</span>*(<span class="number">4</span>*<span class="number">7</span><span class="number">-5</span>*<span class="number">2</span>)+(<span class="number">4</span>*<span class="number">8</span>- <span class="number">-2</span>*<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>-2.0000000000000004
+[[ 6  1  1]
+ [ 4 -2  5]
+ [ 2  8  7]]
+-306.0
+-306</code></pre><p>numpy.linalg.solve()<br>该函数给出了矩阵形式的线性方程的解。<br>例：<br>x + y + z = 6<br>2y + 5z = -4<br>2x + 5y - z = 27</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a=np.array([[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">0</span>,<span class="number">2</span>,<span class="number">5</span>],[<span class="number">2</span>,<span class="number">5</span>,<span class="number">-1</span>]])</span><br><span class="line">print(<span class="string">'数组a:'</span>)</span><br><span class="line">print(a)</span><br><span class="line">print(<span class="string">'a的逆矩阵'</span>)</span><br><span class="line">print(np.linalg.inv(a))</span><br><span class="line">print(<span class="string">'矩阵b:'</span>)</span><br><span class="line">b=np.array([[<span class="number">6</span>],[<span class="number">-4</span>],[<span class="number">27</span>]])</span><br><span class="line">print(b)</span><br><span class="line">print(<span class="string">'计算：A^(-1)B:'</span>)</span><br><span class="line">x=np.linalg.solve(a,b)</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
+
+<pre><code>数组a:
+[[ 1  1  1]
+ [ 0  2  5]
+ [ 2  5 -1]]
+a的逆矩阵
+[[ 1.28571429 -0.28571429 -0.14285714]
+ [-0.47619048  0.14285714  0.23809524]
+ [ 0.19047619  0.14285714 -0.0952381 ]]
+矩阵b:
+[[ 6]
+ [-4]
+ [27]]
+计算：A^(-1)B:
+[[ 5.]
+ [ 3.]
+ [-2.]]</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
           
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            01-14
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2021/01/14/numpy/" style="color: #0085a1">
-              <span>
-                blog1
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-          </li>
           
-          <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-          <li>
-            01-14
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2021/01/14/Hexo-Theme-LiveMyLife/" style="color: #0085a1">
-              <span>
-                test
-              </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+          <li class="next">
+            <a href="/2021/01/14/Hexo-Theme-LiveMyLife/" data-toggle="tooltip" data-placement="top" title="test">Next Post &rarr;</a>
           </li>
           
         </ul>
+
+        
+        <!-- tip start -->
+        <div class="tip">
+          <p>
+            If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
+          </p>
+        </div>
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=blog1&body=Hi,I found this website and thought you might like it http://yoursite-url/2021/01/14/numpy/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+<!-- gitalk start -->
+<!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+<div id="gitalk-container"></div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+<script src="/js/comment/gitalk.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: '',
+    id: 'Thu Jan 14 2021 21:34:17 GMT+0800', // Ensure uniqueness and length less than 50
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 10 ,
+    pagerDirection: 'last',
+    createIssueManually: false ,
+    language: 'en'
+  });
+  gitalk.render('gitalk-container');
+
+  var gtFolded = () => {
+    setTimeout(function() {
+      let markdownBody = document.getElementsByClassName("markdown-body");
+      let list = Array.from(markdownBody);
+      list.forEach(item => {
+        if (item.clientHeight > 250) {
+          item.classList.add('gt-comment-body-folded');
+          item.style.maxHeight = '250px';
+          item.title = 'Click to Expand';
+          item.onclick = function() {
+            item.classList.remove('gt-comment-body-folded');
+            item.style.maxHeight = '';
+            item.title = '';
+            item.onclick = null;
+          };
+        }
+      })
+    }, 800);
+  }
+</script>
+
+<!-- gitalk end -->
+
+
+
+<!-- 2. gitment comment -->
+
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
       </div>
-      
 
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
 
-    </div>
-  </div>
-</div>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
         
-<!-- <h5>VISITORS</h5> -->
-<h5><a href="/">VISITORS</a></h5>
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
-        <hr>
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
     
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
         <!-- Featured Tags -->
-
-<section>
-  <!-- no hr -->
-  <h5><a href="/tags/">FEATURED TAGS</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#test" title="test" rel="1">test</a>
-    
-    
-    
-    <a href="/tags/#hhh" title="hhh" rel="1">hhh</a>
-    
-    
-    
-    <a href="/tags/#machine learning" title="machine learning" rel="1">machine learning</a>
-    
-    
-    
-    <a href="/tags/#python" title="python" rel="1">python</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/fatpeople.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>Fat people have no future, either thin or die...</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/V-Vincen">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://twitter.com/V_Vincen_">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.instagram.com/v_vincen_">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="http://weibo.com/WVincen">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
         
-<!-- <h5>RECENT POSTS</h5> -->
-<h5><a href="/">RECENT POSTS</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../2021/01/14/numpy/">
-      <li>blog1</li>
-    </a>
-    
-    <a href="../../2021/01/14/Hexo-Theme-LiveMyLife/">
-      <li>test</li>
-    </a>
-    
-  </ul>
-</div>
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">FEATURED TAGS</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#machine learning" title="machine learning">machine learning</a>
+            
+            <a class="tag" href="/tags/#python" title="python">python</a>
+            
+          </div>
+        </section>
+        
 
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<!-- <h5>FRIENDS</h5> -->
-<h5><a href="/">FRIENDS</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://v-vincen.life/" target="_blank">V_Vincen</a></li>
-  
-  <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
-  
-  <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
-  
-  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
-  
-</ul>
-
-
-        <hr>
-    
         
-    <!-- <h5>ARCHIVES</h5> -->
-    <h5><a href="/archives/">ARCHIVES</a></h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2021/01/">January 2021</a><span class="archive-list-count">2</span></li></ul>
+        <hr>
+        <h5>FRIENDS</h5>
+        <ul class="list-inline">
+
+          
+          <li>
+            <a href="https://v-vincen.life/" target="_blank">V_Vincen</a>
+          </li>
+          
+          <li>
+            <a href="http://beantech.org" target="_blank">Bean Tech</a>
+          </li>
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
     </div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<!-- <h5>categories</h5> -->
-<h5><a href="/categories/">CATEGORIES</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#study">
-      <li>study</li>
-    </a>
-    
-    <a href="/categories/#python">
-      <li>python</li>
-    </a>
-    
-    <a href="/categories/#machine learning">
-      <li>machine learning</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-    
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 	<!-- Footer (contains ThemeColor、viewer) -->
