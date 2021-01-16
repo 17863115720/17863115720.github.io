@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite-url/2021/01/16/first_origin/</loc>
+    
+    <lastmod>2021-01-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/2021/01/14/numpy/</loc>
     
     <lastmod>2021-01-14</lastmod>
@@ -53,7 +60,7 @@
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2021-01-14</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,28 +68,28 @@
   
   <url>
     <loc>http://yoursite-url/tags/test/</loc>
-    <lastmod>2021-01-14</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/hhh/</loc>
-    <lastmod>2021-01-14</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/machine-learning/</loc>
-    <lastmod>2021-01-14</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/python/</loc>
-    <lastmod>2021-01-14</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -91,21 +98,21 @@
   
   <url>
     <loc>http://yoursite-url/categories/study/</loc>
-    <lastmod>2021-01-14</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/python/</loc>
-    <lastmod>2021-01-14</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/categories/python/machine-learning/</loc>
-    <lastmod>2021-01-14</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
